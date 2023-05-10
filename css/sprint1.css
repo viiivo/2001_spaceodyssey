@@ -142,7 +142,6 @@ margin-top: 0.5em;
       animation: moveImage 5s infinite;
       z-index: 2;
       max-width: 10vw;
-    margin-top: -1vw;
       animation-timing-function: ease-in-out;
     }
     
@@ -174,6 +173,7 @@ margin-top: 0.5em;
         z-index: 1;
         max-width: 85%;
         padding-left: 0.7em;
+pointer-events: none;
         
     }
 
