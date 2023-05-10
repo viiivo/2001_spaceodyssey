@@ -1,0 +1,223 @@
+body{
+    background-color: black;
+    
+    margin: 0;
+    }
+      #flying-image {
+        animation: moveImage 5s infinite;
+        z-index: 2;
+        max-width: 10vw;;
+        animation-timing-function: ease-in-out;
+      }
+      
+      @keyframes moveImage {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+            transform: translateY(10vh) translateX(45vw)rotate(45deg);
+          }
+        50% {
+            transform: translateY(25vh)translatex(90vw) rotate(-90deg) ;
+        }
+        75% {
+            transform: translateY(1vh)translateX(25vw) rotate(180deg) ;
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+      }
+      
+      
+/*Grid Bilder*/
+.grid-container-1 {
+    padding-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(5,20vw);
+    grid-template-rows: repeat(4,20vh);
+    margin: 0px;
+    gap:0px
+}
+
+img{
+    height: auto;
+    max-width: 100%;
+}
+
+.hoverable:hover {
+    opacity: 0;
+  }
+
+.bild-hallway{
+    margin-top: 2em;
+    grid-column: 1/ span 3;
+    grid-row: 3
+}
+
+.bild-monkey{
+    grid-column: 3/ span 2;
+    grid-row: 1;
+    z-index: 1;
+    
+}
+
+.bild-warning{
+    margin-top: 3em;
+    margin-left: 2em;
+    margin-right: 3em;
+    grid-column: 4/ span 2;
+    grid-row: 4
+}
+.lauftext-grid{
+    grid-column: 4/ span 2;
+    grid-row: 4
+}
+.lauftext{
+    color: white;
+    font-size: 1.8vw;
+    font-family: eurostile, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 2em;
+    margin-top: 3.6em;
+    line-height: 130%;
+}
+.untertitel-grid{
+    grid-column: 4/ span 2;
+    grid-row: 3;
+
+}
+.untertitel{
+color: white;
+font-size: 2.2rem;
+font-family: tenby-five, sans-serif;
+font-weight: 600;
+letter-spacing: 0.05em;
+font-style: normal;
+margin-left: 1.3em;
+margin-top: 0.5em;
+}
+.titel{
+    white-space: nowrap;
+    position: relative;
+    top: -0.22em;
+    color: white;
+    font-family: tenby-five, sans-serif;
+    font-size: 29vw;
+    font-weight: 700;
+    font-style: normal;
+    text-align: left;
+}
+.scroll-grid{
+    grid-column: 1/ span 5;
+    grid-row: 1;
+    z-index: 0;
+}
+#scroll-container {
+    overflow: hidden;
+  }
+  
+  #scroll-text {
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 30s linear infinite;
+    -webkit-animation: my-animation 30s linear infinite;
+    animation: my-animation 30s linear infinite;
+  }
+  
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-260%); }
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-260%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-260%);
+      -webkit-transform: translateX(-260%);
+      transform: translateX(-260%);
+    }
+  }  
+
+  @media screen and (max-width: 390px){
+    img{
+        height: auto;
+    }
+
+    .grid-container-1 {
+        padding-top: 1em;
+    }
+    .bild-monkey{
+        grid-column: 3/ span 3;
+        grid-row: 1;
+        z-index: 1;
+        max-width: 85%;
+        padding-left: 0.7em;
+        
+    }
+
+    .bild-hallway{
+        margin-top: 2em;
+        grid-column: 1/ span 4;
+        grid-row: 3;
+        max-width: 85%;
+        padding-left: 0.7em;
+    }
+    .scroll-grid{
+        grid-column: 1/ span 5;
+        grid-row: 3;
+        z-index: 0;
+    }
+    #scroll-container {
+        overflow: hidden;
+        margin-top: -4em;
+      }
+
+    .titel{
+        font-size: 25vw;
+    }
+    .untertitel-grid{
+        grid-column: 1/ span 2;
+        grid-row: 2;
+    
+    }
+    .untertitel{
+        font-size: 1em; 
+        margin-left: 1em;
+        margin-top: 3em;
+    }
+
+    .bild-warning{
+        grid-column: 1/ span 5;
+        grid-row: 4;
+padding-top: 5em;
+        padding-left: 0em;
+    }
+
+    .lauftext-grid{
+        grid-column: 1/ span 5;
+        grid-row: 4
+    }
+    .lauftext{
+        color: white;
+        font-size: 1.05em;
+    padding-top: 17vw}
+    #flying-image {
+        animation: moveImage 5s infinite;
+        z-index: 2;
+        max-width: 35vw;}
+  }
